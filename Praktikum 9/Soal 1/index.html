@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Tristan Vivaldy 2172032">
+    <title>index</title>
+</head>
+<style>
+    .isi {
+        line-height: 45px;
+        text-align: center;
+        border-radius: 100%;
+        background-color: #778899;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        
+    }
+    .asal {
+        text-align: center;
+        display: flex;
+        background-color: white;
+        justify-content: center;
+    }
+</style>
+<script>
+    function writediv (opsi) {
+        document.write("<div class=isi>"+opsi+"</div>")
+        angka=angka-1
+    }
+</script>
+<body>
+    <script>
+        let jumlah = parseInt(prompt("Berapa NaN bola yang ingin dibuat?"));
+        let angka = jumlah*jumlah;
+        let angka0 = "0"
+        for (let i=0;i<jumlah;i++){
+            document.write("<div class=asal>")
+            for (let j=0;j<jumlah;j++){
+                if (angka < 10 && jumlah>3) {
+                    writediv(angka0+angka)
+                }
+                else {
+                    writediv(angka);
+                }
+            }
+            document.write("</div>")
+        }
+    </script>
+</body>
+</html>

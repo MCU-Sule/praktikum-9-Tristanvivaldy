@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="TristanVivaldy 2172032">
+    <title>index</title>
+</head>
+<style>
+    td {
+        width: 120px;
+        height: 20px;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid black;
+        margin:0px;
+    }
+</style>
+<body>
+    <script>
+        const nama = [];
+        const warna = [];
+        let inputnama;
+        while (true){
+            inputnama = prompt("Masukkan nama:");
+            if (inputnama == "stop" || inputnama == "Stop" || inputnama == "STOP") {
+                break
+            }
+            else {
+                let color = prompt ("Masukkan warna kesukaan (english):")
+                warna.push(color);
+                nama.push(inputnama);
+            }
+        }
+        let cari = prompt ("Masukkan warna yang ingin dicari:")
+        console.log (nama)
+        console.log (warna)
+    </script>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="background-color: grey;"> <b>Nama</b> </td>
+            <td style="background-color: grey;"> <b>Warna Kesukaan</b> </td>
+        </tr>
+        <script>
+            let total=0;
+            for (j=0;j<warna.length;j++) {
+                if (cari.toLowerCase()==warna[j].toLowerCase()){
+                    total++
+                }
+            }
+            console.log (total);
+
+            for (i=0;i<nama.length;i++){
+                document.write("<tr>")
+                    document.write("<td style='background-color:"+warna[i]+"'>"+nama[i]+"</td>")
+                    document.write("<td style='background-color:"+warna[i]+"'>"+warna[i]+"</td>")
+                document.write("</tr>")
+            }
+        </script>
+        </table>
+        <br>
+        <script>
+            let cek = 0;
+            for (i=0;i<warna.length;i++) {
+                if (cari.toLowerCase()==warna[i].toLowerCase()){
+                    cek++
+                }
+            }
+            console.log(cek);
+
+            if (cek > 0 ){
+                document.write ("Ada " +total+ " orang yang menyukai warna " + cari +" yaitu ")
+            for(i=0;i<nama.length;i++) {
+            if (cari.toLowerCase()==warna[i].toLowerCase()) {
+                document.write ( nama[i] +"&nbsp;")
+                }
+            }
+        }
+        else {
+            document.write ("Tidak ada yang menyukai warna tersebut")
+        }
+    </script>
+</body>
+</html>
